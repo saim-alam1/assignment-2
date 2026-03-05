@@ -5,7 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import CustomerTickets from "./CustomerTickets/CustomerTickets";
 import Loading from "./Loading/Loading";
 import TaskStatus from "./Components/TaskStatus/TaskStatus";
-import { ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import ResolveTasks from "./Components/ResolveTasks/ResolveTasks";
 import Footer from "./Components/Footer/Footer";
 
@@ -30,6 +30,7 @@ function App() {
       (filteredTicket) => filteredTicket.id !== tasks.id,
     );
     setTicketData(filterTasks);
+    toast.success("Resolved Successfully");
   };
 
   return (
