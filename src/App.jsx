@@ -7,6 +7,7 @@ import Loading from "./Loading/Loading";
 import TaskStatus from "./Components/TaskStatus/TaskStatus";
 import { ToastContainer } from "react-toastify";
 import ResolveTasks from "./Components/ResolveTasks/ResolveTasks";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [ticketData, setTicketData] = useState([]);
@@ -68,6 +69,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer />
       <ToastContainer />
     </>
   );
