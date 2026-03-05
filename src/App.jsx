@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./Components/Banner/Banner";
 import Navbar from "./Components/Navbar/Navbar";
@@ -14,6 +14,14 @@ const fetchTicketData = async () => {
 const ticketsPromise = fetchTicketData();
 
 function App() {
+  const [taskInProgress, setTaskInProgress] = useState([]);
+
+  // const handleTaskInProgress = (ticketData) => {
+  //   setTaskInProgress([...taskInProgress, ticketData]);
+  // };
+
+  console.log(taskInProgress);
+
   return (
     <>
       <Navbar />
@@ -23,7 +31,11 @@ function App() {
           {/* Cards Component */}
           <div className="col-span-2">
             <Suspense fallback={<Loading />}>
-              <CustomerTickets ticketsPromise={ticketsPromise} />
+              <CustomerTickets
+                ticketsPromise={ticketsPromise}
+                taskInProgress={taskInProgress}
+                setTaskInProgress={setTaskInProgress}
+              />
             </Suspense>
           </div>
           {/* Task & Resolve Component */}

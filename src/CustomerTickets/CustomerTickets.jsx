@@ -1,7 +1,11 @@
 import { use } from "react";
 import CustomerTicket from "../Components/CustomerTicket/CustomerTicket";
 
-const CustomerTickets = ({ ticketsPromise }) => {
+const CustomerTickets = ({
+  ticketsPromise,
+  taskInProgress,
+  setTaskInProgress,
+}) => {
   const ticketsData = use(ticketsPromise);
 
   return (
@@ -12,7 +16,12 @@ const CustomerTickets = ({ ticketsPromise }) => {
 
       <div className="grid grid-cols-2 gap-3">
         {ticketsData.map((ticket) => (
-          <CustomerTicket key={ticket.id} ticket={ticket} />
+          <CustomerTicket
+            key={ticket.id}
+            ticket={ticket}
+            taskInProgress={taskInProgress}
+            setTaskInProgress={setTaskInProgress}
+          />
         ))}
       </div>
     </div>

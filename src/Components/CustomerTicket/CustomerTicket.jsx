@@ -1,20 +1,36 @@
+import { useState } from "react";
 import greenCircle from "../../assets/greenCircle.png";
+import yellowCircle from "../../assets/yellowCircle.png";
 import calenderImg from "../../assets/Vector.png";
 
-const CustomerTicket = ({ ticket }) => {
-  console.log(ticket);
+const CustomerTicket = ({ ticket, taskInProgress, setTaskInProgress }) => {
+  const [statusInProgress, setStatusInProgress] = useState(false);
+
+  const handleCards = () => {
+    setStatusInProgress(true);
+    setTaskInProgress([...taskInProgress, ticket]);
+  };
 
   return (
-    <div className="card bg-base-100 shadow-sm">
+    <div
+      onClick={handleCards}
+      className="card bg-base-100 shadow-sm cursor-pointer"
+    >
       <div className="card-body">
         <span className="flex items-center justify-between">
           <h2 className="card-title text-[#001931] text-[18px] font-medium">
             {ticket.title}
           </h2>
-          <button className="flex items-center gap-1.5 btn shadow-none bg-[#B9F8CF] py-1 px-3 rounded-full">
-            <img src={greenCircle} alt="Green Circle Shape" />
-            <p className="text-[16px] font-medium text-[#0B5E06]">
-              {ticket.status}
+          <button
+            className={`flex items-center gap-1.5 btn shadow-none ${statusInProgress ? "bg-[#F8F3B9] text-[#9C7700]" : "bg-[#B9F8CF] text-[#0B5E06]"} py-1 px-3 rounded-full`}
+          >
+            {statusInProgress ? (
+              <img src={yellowCircle} alt="Green Circle Shape" />
+            ) : (
+              <img src={greenCircle} alt="Green Circle Shape" />
+            )}
+            <p className="text-[16px] font-medium">
+              {statusInProgress ? "In-Progress" : "Open"}
             </p>
           </button>
         </span>
@@ -24,7 +40,9 @@ const CustomerTicket = ({ ticket }) => {
             <p className="text-[14px] font-medium text-[#627382]">
               {ticket.id}
             </p>
-            <p className="text-[14px] font-medium text-[#F83044]">
+            <p
+              className={`text-[14px] font-medium ${ticket.priority === "HIGHT PRIORITY" ? "text-[#F83044]" : ticket.priority === "MEDIUM PRIORITY" ? "text-[#FEBB0C]" : "text-[#02A53B]"} `}
+            >
               {ticket.priority}
             </p>
           </div>
