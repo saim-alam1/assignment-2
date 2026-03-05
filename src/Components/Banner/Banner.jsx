@@ -1,6 +1,6 @@
 import vector1 from "../../assets/vector1.png";
 
-const Banner = () => {
+const Banner = ({ taskInProgress }) => {
   return (
     <div className="my-10 md:my-12.5 lg:my-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 px-3">
@@ -19,7 +19,7 @@ const Banner = () => {
             />
           </div>
           <h2 className="text-2xl">In-Progress</h2>
-          <h5 className="text-6xl font-semibold">0</h5>
+          <h5 className="text-6xl font-semibold">{taskInProgress.length}</h5>
         </div>
 
         {/* Banner Card 2 */}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import greenCircle from "../../assets/greenCircle.png";
 import yellowCircle from "../../assets/yellowCircle.png";
 import calenderImg from "../../assets/Vector.png";
+import { toast } from "react-toastify";
 
 const CustomerTicket = ({ ticket, setTaskInProgress }) => {
   const [statusInProgress, setStatusInProgress] = useState(false);
@@ -12,6 +13,7 @@ const CustomerTicket = ({ ticket, setTaskInProgress }) => {
       const filteredData = prev.filter((data) => data.id !== ticket.id);
       return [...filteredData, ticket];
     });
+    toast.success("Task Added To In-Progress");
   };
 
   return (
