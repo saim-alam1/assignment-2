@@ -1,12 +1,12 @@
 import { use } from "react";
-import CustomerTicket from "./CustomerTicket/CustomerTicket";
+import CustomerTicket from "../Components/CustomerTicket/CustomerTicket";
 
 const CustomerTickets = ({ ticketsPromise }) => {
   const ticketsData = use(ticketsPromise);
 
   return (
-    <div>
-      <h1 className="text-2xl font-semibold text-[#34485A]">
+    <div className="mb-10 px-3">
+      <h1 className="text-2xl font-semibold text-[#34485A] mb-4">
         Customer Tickets
       </h1>
 

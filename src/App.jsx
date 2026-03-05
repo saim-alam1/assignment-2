@@ -4,6 +4,7 @@ import Banner from "./Components/Banner/Banner";
 import Navbar from "./Components/Navbar/Navbar";
 import CustomerTickets from "./CustomerTickets/CustomerTickets";
 import Loading from "./Loading/Loading";
+import TaskStatus from "./Components/TaskStatus/TaskStatus";
 
 const fetchTicketData = async () => {
   const res = await fetch("/ticketsData");
@@ -18,9 +19,18 @@ function App() {
       <Navbar />
       <div className="max-w-400 mx-auto">
         <Banner />
-        <Suspense fallback={<Loading />}>
-          <CustomerTickets ticketsPromise={ticketsPromise} />
-        </Suspense>
+        <div className="grid grid-cols-3 gap-2">
+          {/* Cards Component */}
+          <div className="col-span-2">
+            <Suspense fallback={<Loading />}>
+              <CustomerTickets ticketsPromise={ticketsPromise} />
+            </Suspense>
+          </div>
+          {/* Task & Resolve Component */}
+          <div className="col-span-1">
+            <TaskStatus />
+          </div>
+        </div>
       </div>
     </>
   );
