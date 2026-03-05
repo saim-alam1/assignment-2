@@ -1,6 +1,6 @@
 import TaskStatusCard from "../TaskStatusCard/TaskStatusCard";
 
-const TaskStatus = ({ taskInProgress }) => {
+const TaskStatus = ({ taskInProgress, handleResolved }) => {
   return (
     <div className="pl-2">
       <h1 className="text-2xl font-semibold text-[#34485A]">Task Status</h1>
@@ -12,7 +12,11 @@ const TaskStatus = ({ taskInProgress }) => {
 
       <div>
         {taskInProgress.map((taskData) => (
-          <TaskStatusCard key={taskData.id} taskData={taskData} />
+          <TaskStatusCard
+            key={taskData.id}
+            taskData={taskData}
+            handleResolved={handleResolved}
+          />
         ))}
       </div>
     </div>
