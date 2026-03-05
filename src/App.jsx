@@ -35,11 +35,19 @@ function App() {
             </Suspense>
           </div>
           {/* Task & Resolve Component */}
-          <div className="col-span-1">
-            <TaskStatus taskInProgress={taskInProgress} />
-            <ResolveTasks />
+          <div className="flex flex-col lg:flex-r xl:flex-none">
+            <div className="col-span-1 order-1 lg:w-full">
+              <TaskStatus taskInProgress={taskInProgress} />
+            </div>
+            {/* For Responsiveness Resolve Component (1) */}
+            <div className="col-span-1 order-2 lg:hidden xl:flex">
+              {/* <p>1</p> */}
+              <ResolveTasks />
+            </div>
           </div>
-          <div className="col-span-1">
+          {/* For Responsiveness Resolve Component (2) */}
+          <div className="hidden lg:flex xl:hidden">
+            {/* <p>2</p> */}
             <ResolveTasks />
           </div>
         </div>
