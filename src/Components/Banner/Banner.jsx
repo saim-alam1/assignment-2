@@ -21,6 +21,7 @@ const Banner = () => {
           <h2 className="text-2xl">In-Progress</h2>
           <h5 className="text-6xl font-semibold">0</h5>
         </div>
+
         {/* Banner Card 2 */}
         <div className="bg-linear-to-r from-[#54cf67] to-[#00827a] rounded-lg h-62.5 flex flex-col items-center justify-center text-white space-y-4 relative">
           {/* Vector Image 1 */}

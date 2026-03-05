@@ -1,0 +1,137 @@
+[
+  {
+    "id": "#1001",
+    "title": "Login button not responding",
+    "description": "Users are unable to click the login button on the homepage.",
+    "customer": "Rahim Uddin",
+    "priority": "HIGHT PRIORITY",
+    "status": "Open",
+    "createdAt": "3/1/2026"
+  },
+  {
+    "id": "#1002",
+    "title": "Payment gateway timeout issue",
+    "description": "Payment page takes too long to load and sometimes fails.",
+    "customer": "Nusrat Jahan",
+    "priority": "HIGHT PRIORITY",
+    "status": "Open",
+    "createdAt": "3/1/2026"
+  },
+  {
+    "id": "#1003",
+    "title": "Profile image upload error",
+    "description": "Customers cannot upload profile pictures in account settings.",
+    "customer": "Sabbir Ahmed",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "3/2/2026"
+  },
+  {
+    "id": "#1004",
+    "title": "Dashboard analytics not updating",
+    "description": "Real-time statistics are not refreshing automatically.",
+    "customer": "Farhana Islam",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "3/2/2026"
+  },
+  {
+    "id": "#1005",
+    "title": "Broken link in footer section",
+    "description": "The contact us link in footer redirects to 404 page.",
+    "customer": "Tanvir Hasan",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "3/2/2026"
+  },
+  {
+    "id": "#1006",
+    "title": "Notification badge not clearing",
+    "description": "Unread notification badge remains even after viewing notifications.",
+    "customer": "Mim Akter",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "3/2/2026"
+  },
+  {
+    "id": "#1007",
+    "title": "Slow loading on product page",
+    "description": "Product detail pages load very slowly on mobile devices.",
+    "customer": "Arif Hossain",
+    "priority": "HIGHT PRIORITY",
+    "status": "Open",
+    "createdAt": "3/3/2026"
+  },
+  {
+    "id": "#1008",
+    "title": "Search functionality inaccurate",
+    "description": "Search results do not match entered keywords.",
+    "customer": "Shila Roy",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "3/3/2026"
+  },
+  {
+    "id": "#1009",
+    "title": "Email verification not sending",
+    "description": "New users are not receiving verification emails.",
+    "customer": "Imran Chowdhury",
+    "priority": "HIGHT PRIORITY",
+    "status": "Open",
+    "createdAt": "3/3/2026"
+  },
+  {
+    "id": "#1010",
+    "title": "UI alignment issue on mobile",
+    "description": "Navbar items are overlapping on small screens.",
+    "customer": "Tania Sultana",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "3/3/2026"
+  },
+  {
+    "id": "#1011",
+    "title": "Password reset link expired instantly",
+    "description": "Users report reset link becomes invalid immediately after clicking.",
+    "customer": "Mehedi Hasan",
+    "priority": "HIGHT PRIORITY",
+    "status": "Open",
+    "createdAt": "3/3/2026"
+  },
+  {
+    "id": "#1012",
+    "title": "Order history missing data",
+    "description": "Previous orders are not displaying in customer dashboard.",
+    "customer": "Riya Karim",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "3/4/2026"
+  },
+  {
+    "id": "#1013",
+    "title": "Image carousel autoplay glitch",
+    "description": "Slider autoplay stops after first transition.",
+    "customer": "Jahidul Islam",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "3/4/2026"
+  },
+  {
+    "id": "#1014",
+    "title": "API returning 500 error",
+    "description": "Internal server error when fetching user details.",
+    "customer": "Sadia Rahman",
+    "priority": "HIGHT PRIORITY",
+    "status": "Open",
+    "createdAt": "3/4/2026"
+  },
+  {
+    "id": "#1015",
+    "title": "Logout session not clearing",
+    "description": "Users remain logged in after clicking logout button.",
+    "customer": "Rakib Khan",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "3/4/2026"
+  }
+]
