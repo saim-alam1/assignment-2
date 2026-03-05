@@ -1,11 +1,7 @@
 import { use } from "react";
 import CustomerTicket from "../Components/CustomerTicket/CustomerTicket";
 
-const CustomerTickets = ({
-  ticketsPromise,
-  taskInProgress,
-  setTaskInProgress,
-}) => {
+const CustomerTickets = ({ ticketsPromise, setTaskInProgress }) => {
   const ticketsData = use(ticketsPromise);
 
   return (
@@ -19,7 +15,6 @@ const CustomerTickets = ({
           <CustomerTicket
             key={ticket.id}
             ticket={ticket}
-            taskInProgress={taskInProgress}
             setTaskInProgress={setTaskInProgress}
           />
         ))}

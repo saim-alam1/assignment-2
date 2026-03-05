@@ -3,17 +3,20 @@ import greenCircle from "../../assets/greenCircle.png";
 import yellowCircle from "../../assets/yellowCircle.png";
 import calenderImg from "../../assets/Vector.png";
 
-const CustomerTicket = ({ ticket, taskInProgress, setTaskInProgress }) => {
+const CustomerTicket = ({ ticket, setTaskInProgress }) => {
   const [statusInProgress, setStatusInProgress] = useState(false);
 
-  const handleCards = () => {
+  const handleCards = (ticket) => {
     setStatusInProgress(true);
-    setTaskInProgress([...taskInProgress, ticket]);
+    setTaskInProgress((prev) => {
+      const filteredData = prev.filter((data) => data.id !== ticket.id);
+      return [...filteredData, ticket];
+    });
   };
 
   return (
     <div
-      onClick={handleCards}
+      onClick={() => handleCards(ticket)}
       className="card bg-base-100 shadow-sm cursor-pointer"
     >
       <div className="card-body">

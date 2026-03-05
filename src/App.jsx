@@ -16,10 +16,6 @@ const ticketsPromise = fetchTicketData();
 function App() {
   const [taskInProgress, setTaskInProgress] = useState([]);
 
-  // const handleTaskInProgress = (ticketData) => {
-  //   setTaskInProgress([...taskInProgress, ticketData]);
-  // };
-
   console.log(taskInProgress);
 
   return (
