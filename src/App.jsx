@@ -35,7 +35,7 @@ function App() {
     <>
       <Navbar />
       <div className="max-w-400 mx-auto">
-        <Banner taskInProgress={taskInProgress} />
+        <Banner taskInProgress={taskInProgress} resolved={resolved} />
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2">
           {/* Cards Component */}
           <div className="col-span-2">
