@@ -48,21 +48,21 @@ function App() {
             </Suspense>
           </div>
           {/* Task & Resolve Component */}
-          <div className="flex flex-col lg:flex-r xl:flex-none">
+          <div className="w-full">
             <div className="col-span-1 order-1 lg:w-full">
               <TaskStatus
                 taskInProgress={taskInProgress}
                 handleResolved={handleResolved}
               />
             </div>
-            {/* For Responsiveness Resolve Component (1) */}
-            <div className="col-span-1 order-2 lg:hidden xl:flex">
+            {/* Resolve Component Except LG Device */}
+            <div className="col-span-1 order-2 lg:hidden xl:flex w-full">
               {/* <p>1</p> */}
               <ResolveTasks resolved={resolved} />
             </div>
           </div>
-          {/* For Responsiveness Resolve Component (2) */}
-          <div className="hidden lg:flex xl:hidden">
+          {/* Resolve Component Only For LG Device */}
+          <div className="hidden lg:flex xl:hidden w-full">
             {/* <p>2</p> */}
             <ResolveTasks resolved={resolved} />
           </div>
