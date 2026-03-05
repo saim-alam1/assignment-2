@@ -10,7 +10,7 @@ const CustomerTickets = ({ ticketsPromise, setTaskInProgress }) => {
         Customer Tickets
       </h1>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {ticketsData.map((ticket) => (
           <CustomerTicket
             key={ticket.id}

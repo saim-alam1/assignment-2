@@ -6,6 +6,7 @@ import CustomerTickets from "./CustomerTickets/CustomerTickets";
 import Loading from "./Loading/Loading";
 import TaskStatus from "./Components/TaskStatus/TaskStatus";
 import { ToastContainer } from "react-toastify";
+import ResolveTasks from "./Components/ResolveTasks/ResolveTasks";
 
 const fetchTicketData = async () => {
   const res = await fetch("/ticketsData");
@@ -22,7 +23,7 @@ function App() {
       <Navbar />
       <div className="max-w-400 mx-auto">
         <Banner taskInProgress={taskInProgress} />
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-2">
           {/* Cards Component */}
           <div className="col-span-2">
             <Suspense fallback={<Loading />}>
@@ -36,6 +37,10 @@ function App() {
           {/* Task & Resolve Component */}
           <div className="col-span-1">
             <TaskStatus taskInProgress={taskInProgress} />
+            <ResolveTasks />
+          </div>
+          <div className="col-span-1">
+            <ResolveTasks />
           </div>
         </div>
       </div>
